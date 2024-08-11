@@ -13,6 +13,7 @@ APISIX_STAND_ALONE=true
 KEYCLOAK_URL=https://keycloak-domain/realms/your-realm/.well-known/openid-configuration
 KEYCLOAK_CLIENT_ID=client-id-for-keycloak-oauth-client
 KEYCLOAK_CLIENT_SECRET=client-secret-for-keycloak-oauth-client
+KEYCLOAK_REALM=keycloak-realm
 ```
 
 ### Optional Fields
