@@ -1,2 +1,25 @@
 # apisix
-API Gateway for the NRDB API
+
+API Gateway for the NRDB API, using APISIX.
+
+## Environment 
+
+This setup needs an environment file in `.env` to configure it.
+
+### Required Fields
+
+```
+APISIX_STAND_ALONE=true
+KEYCLOAK_URL=https://keycloak-doain/realms/your-realm/.well-known/openid-configuration
+```
+
+### Optional Fields
+
+If using the nginx-proxy configuration, also add config for it:
+
+```
+VIRTUAL_HOST=the-domain.com
+VIRTUAL_PORT=9080
+LETSENCRYPT_HOST=the-domain.com
+LETSENCRYPT_EMAIL=email@the-domain.com
+```
