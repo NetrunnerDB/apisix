@@ -10,7 +10,7 @@ This setup needs an environment file in `.env` to configure it.
 
 ```
 APISIX_STAND_ALONE=true
-KEYCLOAK_URL=https://keycloak-doain/realms/your-realm/.well-known/openid-configuration
+KEYCLOAK_URL=https://keycloak-domain/realms/your-realm/.well-known/openid-configuration
 ```
 
 ### Optional Fields
