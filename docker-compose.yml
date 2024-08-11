@@ -1,0 +1,17 @@
+services:
+  apisix:
+    image: apache/apisix:${APISIX_IMAGE_TAG:-3.9.0-debian}
+    restart: always
+    volumes:
+      - ./apisix-standalone.yaml:/usr/local/apisix/conf/apisix.yaml:ro
+    env_file: ".env"
+    ports:
+      # We only need the public HTTP port because this lives behind Nginx.
+      - "9080:9080/tcp"
+      # No admin ports are enabled because we are using a static config file.
+    networks:
+      null_signal:
+
+networks:
+  null_signal:
+    external: true
